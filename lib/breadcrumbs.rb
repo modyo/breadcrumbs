@@ -10,6 +10,10 @@ class Breadcrumbs
     self.items = []
   end
 
+  def to_liquid
+    self
+  end
+
   # Add a new breadcrumbs.
   #
   #   breadcrumbs.add "Home"

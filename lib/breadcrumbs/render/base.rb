@@ -30,7 +30,7 @@ class Breadcrumbs
       protected
       def wrap_item(url, text, options)
         if url
-          tag(:a, text, options.merge(:href => url))
+          tag(:a, text, options.merge(:href => url)) + " <span class=\"divider\">/</span>"
         else
           text
         end

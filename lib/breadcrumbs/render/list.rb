@@ -29,8 +29,12 @@ class Breadcrumbs
         css << "last" if i == size - 1
         css << "item-#{i}"
 
-        text, url, options = *item
+        text, url, options = *item        
+
         text = wrap_item(url, CGI.escapeHTML(text), options)
+        
+        css << 'active' unless url
+
         tag(:li, text, :class => css.join(" "))
       end
     end

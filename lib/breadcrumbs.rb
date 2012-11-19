@@ -57,7 +57,6 @@ class Breadcrumbs
   #
   def render(options = {})
     options[:format] ||= :list
-    options[:separator] = "<span class=\"divider\">/</span>"
 
     klass_name = options.delete(:format).to_s.classify
     klass = Breadcrumbs::Render.const_get(klass_name)

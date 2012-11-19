@@ -3,7 +3,7 @@ class Breadcrumbs
     class List < Base # :nodoc: all
       def render
         options = {
-          :class => "breadcrumbs"
+          :class => "breadcrumb"
         }.merge(default_options)
 
         tag(list_style, options) do

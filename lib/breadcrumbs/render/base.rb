@@ -32,7 +32,7 @@ class Breadcrumbs
         if url
           tag(:a, text, options.merge(:href => url))
         else
-          text
+          tag(:span, text, options)
         end
       end
     end
